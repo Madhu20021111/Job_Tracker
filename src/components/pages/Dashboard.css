@@ -1,0 +1,151 @@
+.dashboard-page {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.dashboard-header {
+  margin-bottom: 32px;
+}
+
+.dashboard-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.dashboard-subtitle {
+  color: #6b7280;
+}
+
+.dashboard-tools {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.tool-card {
+  padding: 24px;
+  cursor: pointer;
+}
+
+.tool-icon {
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  width: fit-content;
+  margin-bottom: 16px;
+}
+
+.tool-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.tool-description {
+  color: #6b7280;
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.activity-card,
+.stats-card {
+  padding: 24px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  color: #10b981;
+}
+
+.activity-item span {
+  color: #374151;
+}
+
+.stats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.stat-blue {
+  background-color: #eff6ff;
+}
+
+.stat-green {
+  background-color: #f0fdf4;
+}
+
+.stat-purple {
+  background-color: #faf5ff;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.stat-blue .stat-value {
+  color: #2563eb;
+}
+
+.stat-green .stat-value {
+  color: #059669;
+}
+
+.stat-purple .stat-value {
+  color: #7c3aed;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard-tools {
+    grid-template-columns: 1fr;
+  }
+}

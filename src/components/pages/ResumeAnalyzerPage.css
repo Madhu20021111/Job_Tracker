@@ -1,0 +1,146 @@
+.resume-page {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.resume-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.upload-card,
+.analysis-card {
+  padding: 24px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.upload-zone {
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  padding: 32px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+  color: #9ca3af;
+}
+
+.upload-zone:hover {
+  border-color: #2563eb;
+}
+
+.upload-text {
+  color: #6b7280;
+  margin: 8px 0;
+}
+
+.upload-subtext {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.upload-success {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  margin-top: 16px;
+  color: #059669;
+}
+
+.analysis-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.score-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: #eff6ff;
+  border-radius: 8px;
+}
+
+.score-label {
+  font-weight: 500;
+  color: #1e40af;
+}
+
+.score-value {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #eab308;
+}
+
+.score-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.feedback-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feedback-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.feedback-error {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.feedback-warning {
+  background-color: #fefce8;
+  color: #d97706;
+}
+
+.feedback-success {
+  background-color: #f0fdf4;
+  color: #059669;
+}
+
+.feedback-title {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.feedback-text {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 32px;
+  color: #6b7280;
+}
+
+.empty-state svg {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .resume-content {
+    grid-template-columns: 1fr;
+  }
+}

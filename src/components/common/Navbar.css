@@ -1,0 +1,58 @@
+.navbar {
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navbar-logo {
+  background-color: #2563eb;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  margin-right: 12px;
+}
+
+.navbar-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #111827;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar-welcome {
+  color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0 16px;
+  }
+  
+  .navbar-welcome {
+    display: none;
+  }
+}
