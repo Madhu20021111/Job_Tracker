@@ -1,7 +1,19 @@
 .footer {
-  background-color: #1f2937;
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
   color: #f9fafb;
   margin-top: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
 }
 
 .footer-container {
@@ -14,37 +26,55 @@
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1.5fr;
   gap: 40px;
-  padding: 48px 0 32px;
+  padding: 60px 0 40px;
 }
 
 .footer-section {
   display: flex;
   flex-direction: column;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.footer-section:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.footer-section:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.footer-section:nth-child(4) {
+  animation-delay: 0.3s;
 }
 
 .footer-brand {
   display: flex;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .footer-logo {
-  background-color: #2563eb;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
   color: white;
-  padding: 8px;
-  border-radius: 8px;
-  margin-right: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  margin-right: 16px;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
 }
 
 .footer-title {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
+  background: linear-gradient(135deg, #f9fafb 0%, #e5e7eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .footer-description {
   color: #d1d5db;
-  line-height: 1.6;
-  margin-bottom: 24px;
+  line-height: 1.7;
+  margin-bottom: 28px;
 }
 
 .footer-social {
@@ -54,41 +84,77 @@
 
 .social-link {
   color: #d1d5db;
-  transition: color 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .social-link:hover {
   color: #2563eb;
+  background: rgba(37, 99, 235, 0.1);
+  transform: translateY(-2px);
 }
 
 .footer-heading {
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   color: white;
+  position: relative;
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 30px;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
 }
 
 .footer-links {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .footer-links a {
   color: #d1d5db;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: all 0.3s ease;
+  padding: 4px 0;
+  position: relative;
+}
+
+.footer-links a::before {
+  content: '';
+  position: absolute;
+  left: -16px;
+  top: 50%;
+  width: 8px;
+  height: 2px;
+  background: #2563eb;
+  transform: translateY(-50%) scaleX(0);
+  transition: transform 0.3s ease;
 }
 
 .footer-links a:hover {
   color: #2563eb;
+  padding-left: 8px;
+}
+
+.footer-links a:hover::before {
+  transform: translateY(-50%) scaleX(1);
 }
 
 .footer-contact {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 }
 
 .contact-item {
@@ -96,11 +162,18 @@
   align-items: center;
   gap: 12px;
   color: #d1d5db;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+.contact-item:hover {
+  color: #2563eb;
 }
 
 .footer-bottom {
   border-top: 1px solid #374151;
-  padding: 24px 0;
+  padding: 32px 0;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .footer-bottom-content {
@@ -112,17 +185,20 @@
 
 .footer-legal {
   display: flex;
-  gap: 24px;
+  gap: 32px;
 }
 
 .footer-legal a {
   color: #9ca3af;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 6px;
 }
 
 .footer-legal a:hover {
   color: #2563eb;
+  background: rgba(37, 99, 235, 0.1);
 }
 
 @media (max-width: 968px) {
@@ -135,17 +211,18 @@
 @media (max-width: 640px) {
   .footer-content {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 28px;
+    padding: 48px 0 32px;
   }
   
   .footer-bottom-content {
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
     text-align: center;
   }
   
   .footer-legal {
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
   }
 }

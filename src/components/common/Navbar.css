@@ -1,7 +1,11 @@
 .navbar {
-  background-color: white;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid #e5e7eb;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar-container {
@@ -14,37 +18,51 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 64px;
+  height: 72px;
 }
 
 .navbar-brand {
   display: flex;
   align-items: center;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
 }
 
 .navbar-logo {
-  background-color: #2563eb;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
   color: white;
-  padding: 8px;
-  border-radius: 8px;
-  margin-right: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  margin-right: 16px;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
 }
 
 .navbar-title {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
-  color: #111827;
+  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .navbar-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
 }
 
 .navbar-welcome {
   color: #6b7280;
+  font-weight: 500;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
 }
 
 @media (max-width: 768px) {
@@ -54,5 +72,9 @@
   
   .navbar-welcome {
     display: none;
+  }
+  
+  .navbar-content {
+    height: 64px;
   }
 }
