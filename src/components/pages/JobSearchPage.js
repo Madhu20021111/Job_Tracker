@@ -4,6 +4,7 @@ import Navbar from '../common/Navbar';
 import Button from '../common/Button';
 import Card from '../common/Card';
 import Input from '../common/Input';
+import BackButton from '../common/BackButton';
 import './JobSearchPage.css';
 
 const JobSearchPage = ({ onDashboard, onLogout }) => {
@@ -21,6 +22,10 @@ const JobSearchPage = ({ onDashboard, onLogout }) => {
     <div className="job-search-page">
       <Navbar onDashboard={onDashboard} onLogout={onLogout} />
       <div className="page-container">
+        
+            <BackButton onClick={onDashboard} />
+        
+          
         <div className="page-header">
           <h1 className="page-title">Smart Job Search</h1>
           <p className="page-subtitle">Use natural language to find your perfect job</p>

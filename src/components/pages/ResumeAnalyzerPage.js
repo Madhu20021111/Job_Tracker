@@ -3,6 +3,7 @@ import { Upload, CheckCircle, AlertCircle, FileText, Star, Download } from 'luci
 import Navbar from '../common/Navbar';
 import Button from '../common/Button';
 import Card from '../common/Card';
+import BackButton from '../common/BackButton';
 import './ResumeAnalyzerPage.css';
 
 const ResumeAnalyzerPage = ({ onDashboard, onLogout }) => {
@@ -12,6 +13,7 @@ const ResumeAnalyzerPage = ({ onDashboard, onLogout }) => {
     <div className="resume-page">
       <Navbar onDashboard={onDashboard} onLogout={onLogout} />
       <div className="page-container">
+        <BackButton onClick={onDashboard} />
         <div className="page-header">
           <h1 className="page-title">Resume Analyzer</h1>
           <p className="page-subtitle">Upload your resume and get instant feedback</p>

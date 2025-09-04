@@ -3,6 +3,7 @@ import { Mic, MicOff, Play, Square, Download } from 'lucide-react';
 import Navbar from '../common/Navbar';
 import Button from '../common/Button';
 import Card from '../common/Card';
+import BackButton from '../common/BackButton';
 import './MockInterviewPage.css';
 
 const MockInterviewPage = ({ onDashboard, onLogout }) => {
@@ -39,6 +40,7 @@ const MockInterviewPage = ({ onDashboard, onLogout }) => {
     <div className="mock-interview-page">
       <Navbar onDashboard={onDashboard} onLogout={onLogout} />
       <div className="page-container">
+        <BackButton onClick={onDashboard} />
         <div className="page-header">
           <h1 className="page-title">Mock Interview Practice</h1>
           <p className="page-subtitle">Practice with AI-generated questions and get feedback</p>

@@ -4,7 +4,10 @@ import Navbar from '../common/Navbar';
 import Button from '../common/Button';
 import Card from '../common/Card';
 import Input from '../common/Input';
+import BackButton from '../common/BackButton';
 import './CoverLetterPage.css';
+
+
 
 const CoverLetterPage = ({ onDashboard, onLogout }) => {
   const [formData, setFormData] = useState({
@@ -57,6 +60,7 @@ Sincerely,
     <div className="cover-letter-page">
       <Navbar onDashboard={onDashboard} onLogout={onLogout} />
       <div className="page-container">
+        <BackButton onClick={onDashboard} />
         <div className="page-header">
           <h1 className="page-title">Cover Letter Generator</h1>
           <p className="page-subtitle">Create personalized cover letters in minutes</p>

@@ -135,4 +135,8 @@
   .tips-grid {
     grid-template-columns: 1fr;
   }
+  .back-button {
+  margin-bottom: 20px;
+  align-self: flex-start;
+}
 }

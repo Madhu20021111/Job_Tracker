@@ -64,11 +64,11 @@ function App() {
 
   return (
     <div className="App">
-      <main className="main-content">
+      <div className="app-content">
       {renderPage()}
-      </main>
-      
-      <Footer/>
+      </div>
+     {(isLoggedIn && ['dashboard', 'jobsearch', 'resume', 'interview', 'coverletter'].includes(currentPage)) &&
+      <Footer/>}
     </div>
     
     
