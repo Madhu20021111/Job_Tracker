@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React,{useState} from 'react';
 import { Upload, CheckCircle, AlertCircle, FileText, Star, Download } from 'lucide-react';
 import Navbar from '../common/Navbar';
 import Button from '../common/Button';

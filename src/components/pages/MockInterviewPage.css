@@ -1,0 +1,171 @@
+.mock-interview-page {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.interview-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.interview-card,
+.tips-card {
+  padding: 24px;
+}
+
+.setup-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.interview-options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.option-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.option-label {
+  font-weight: 500;
+  color: #374151;
+}
+
+.option-select {
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.option-select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.interview-session {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.question-display {
+  background-color: #f8fafc;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #2563eb;
+}
+
+.question-counter {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.current-question {
+  font-size: 18px;
+  font-weight: 500;
+  color: #1f2937;
+  line-height: 1.5;
+}
+
+.recording-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.recording-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #dc2626;
+  font-weight: 500;
+}
+
+.recording-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #dc2626;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.question-navigation {
+  display: flex;
+  gap: 12px;
+}
+
+.interview-feedback {
+  background-color: #f0fdf4;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #bbf7d0;
+}
+
+.feedback-title {
+  font-weight: 600;
+  color: #059669;
+  margin-bottom: 8px;
+}
+
+.feedback-placeholder {
+  color: #065f46;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.tips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tip-item {
+  padding: 16px;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  border-left: 3px solid #3b82f6;
+}
+
+.tip-title {
+  font-weight: 600;
+  color: #1e40af;
+  margin-bottom: 8px;
+}
+
+.tip-content {
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .interview-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .question-navigation {
+    flex-direction: column;
+  }
+  
+  .recording-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

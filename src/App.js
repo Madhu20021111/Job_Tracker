@@ -3,12 +3,14 @@ import './styles/index.css';
 import './App.css';
 
 // Import Pages
-import LandingPage from './components/pages/LandingPage.js';
-import LoginPage from './components/pages/LoginPage.js';
-import SignUpPage from './components/pages/SignUpPage.js';
-import Dashboard from './components/pages/Dashboard.js';
-import CoverLetter from './components/pages/CoverLetterPage.js';
-// Import other pages as needed...
+import LandingPage from './components/pages/LandingPage';
+import LoginPage from './components/pages/LoginPage';
+import SignUpPage from './components/pages/SignUpPage';
+import Dashboard from './components/pages/Dashboard';
+import JobSearchPage from './components/pages/JobSearchPage';
+import ResumeAnalyzerPage from './components/pages/ResumeAnalyzerPage';
+import MockInterviewPage from './components/pages/MockInterviewPage';
+import CoverLetterPage from './components/pages/CoverLetterPage';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('landing');
@@ -46,7 +48,14 @@ function App() {
     }
 
     switch (currentPage) {
-      // Add other authenticated pages here...
+      case 'jobsearch':
+        return <JobSearchPage onDashboard={() => setCurrentPage('dashboard')} onLogout={handleLogout} />;
+      case 'resume':
+        return <ResumeAnalyzerPage onDashboard={() => setCurrentPage('dashboard')} onLogout={handleLogout} />;
+      case 'interview':
+        return <MockInterviewPage onDashboard={() => setCurrentPage('dashboard')} onLogout={handleLogout} />;
+      case 'coverletter':
+        return <CoverLetterPage onDashboard={() => setCurrentPage('dashboard')} onLogout={handleLogout} />;
       default:
         return <Dashboard onNavigate={handleNavigation} onDashboard={() => setCurrentPage('dashboard')} onLogout={handleLogout} />;
     }

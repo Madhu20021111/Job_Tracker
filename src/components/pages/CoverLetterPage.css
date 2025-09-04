@@ -1,0 +1,138 @@
+.cover-letter-page {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.cover-letter-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.form-card,
+.preview-card {
+  padding: 24px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.input-label {
+  font-weight: 500;
+  color: #374151;
+}
+
+.text-area {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.text-area:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.cover-letter-preview {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.letter-content {
+  white-space: pre-wrap;
+  font-family: inherit;
+  line-height: 1.6;
+  color: #374151;
+  margin: 0;
+}
+
+.letter-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.empty-preview {
+  text-align: center;
+  padding: 40px 20px;
+  color: #6b7280;
+}
+
+.empty-preview svg {
+  margin-bottom: 16px;
+}
+
+.preview-subtext {
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.tips-section {
+  padding: 24px;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.tip {
+  padding: 16px;
+  background-color: #f0f9ff;
+  border-radius: 8px;
+  border-left: 3px solid #0ea5e9;
+}
+
+.tip-title {
+  font-weight: 600;
+  color: #0369a1;
+  margin-bottom: 8px;
+}
+
+.tip p {
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .cover-letter-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .letter-actions {
+    flex-direction: column;
+  }
+  
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+}
