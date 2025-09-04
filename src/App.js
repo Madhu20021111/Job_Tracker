@@ -11,6 +11,7 @@ import JobSearchPage from './components/pages/JobSearchPage';
 import ResumeAnalyzerPage from './components/pages/ResumeAnalyzerPage';
 import MockInterviewPage from './components/pages/MockInterviewPage';
 import CoverLetterPage from './components/pages/CoverLetterPage';
+import Footer from './components/common/Footer';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('landing');
@@ -63,8 +64,14 @@ function App() {
 
   return (
     <div className="App">
+      <main className="main-content">
       {renderPage()}
+      </main>
+      
+      <Footer/>
     </div>
+    
+    
   );
 }
 
