@@ -42,15 +42,17 @@
 }
 
 .btn-secondary {
-  background: white;
+  background:white;   
   color: #374151;
-  border: 2px solid #e5e7eb;
+  border: #2563eb;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .btn-secondary:hover {
-  background: #f9fafb;
-  border-color: #d1d5db;
+  /* background: #f9fafb; */
+  background: #2563eb;
+  border-color: #2563eb;
+  /* border-color: #d1d5db; */
   transform: translateY(-1px);
 }
 

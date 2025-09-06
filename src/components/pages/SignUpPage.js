@@ -33,7 +33,7 @@ const SignUpPage = ({ onSignUp, onLogin }) => (
             className="auth-link"
             onClick={onLogin}
           >
-            Sign in here
+            Log in here
           </button>
         </p>
       </div>

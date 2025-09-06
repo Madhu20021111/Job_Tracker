@@ -57,10 +57,11 @@
 }
 
 .navbar-welcome {
-  color: #6b7280;
+  color: #0f0f10; 
   font-weight: 500;
   padding: 8px 16px;
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  background: linear-gradient(135deg, #3e5bad 0%, #7781a0 100%);
+  /* background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); */
   border-radius: 20px;
   border: 1px solid #e2e8f0;
 }

@@ -14,7 +14,7 @@ const Navbar = ({ onDashboard, onLogout }) => (
           <span className="navbar-title">JobTracker</span>
         </div>
         <div className="navbar-actions">
-          <span className="navbar-welcome">Welcome back!</span>
+          {/* <span className="navbar-welcome">Welcome back!</span> */}
           <Button variant="secondary" size="sm" onClick={onLogout}>
             Logout
           </Button>
